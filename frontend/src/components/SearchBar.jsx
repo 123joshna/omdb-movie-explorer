@@ -80,7 +80,6 @@ export default function SearchBar({ onSearch }) {
   const toggleListening = () => { if (!supported) return; if (listening) stopListening(); else startListening(); };
 
   const onInputKeyDown = (e) => { if (e.key === 'Enter') return; };
-
   return (
     <form className="search" onSubmit={submit}>
       <input
@@ -90,7 +89,6 @@ export default function SearchBar({ onSearch }) {
         placeholder="Search movies by title..."
         aria-label="Search movies"
       />
-      
       <button type="button" className={`mic-btn ${listening ? 'listening' : ''}`} onClick={toggleListening} title={supported ? (listening ? 'Stop listening' : 'Search by voice') : 'Voice search not supported'}>
         {listening ? '●' : '🎤'}
       </button>
