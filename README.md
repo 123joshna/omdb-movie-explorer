@@ -42,14 +42,15 @@ OMDB Movie Explorer is a small example web application that lets users search fo
 Home / Search Page  
 ![Home](screenshots/mainpage.png)
 
+Result Grid  
+![Movie Result Grid](screenshots/moviesResult.png)
+
 Movie Details Page 
 ![Details](screenshots/movieDetails.png)
 
 Favorites  
 ![Favorites](screenshots/favorites.png)
 
-Result Grid  
-![Movie Result Grid](screenshots/movieResult.png)
 
 **Tech stack**
 - Backend: Node.js, Express, axios
