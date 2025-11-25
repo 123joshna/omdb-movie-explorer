@@ -115,10 +115,6 @@ Notes about UI behavior
 Debugging tips
 - If centered overlays or modals appear clipped or off-center, inspect the DOM to confirm the overlay is mounted as a child of `<body>`.
 - Check for elements with `transform`, `filter`, or `perspective` CSS on parent containers — these can create stacking/containment contexts that affect fixed/absolute elements.
-
-Contributing
-- Fork and create a PR. Keep changes focused and add tests for backend logic where appropriate.
-
 License
 - This project does not include an explicit license file. Add a LICENSE if you intend to open-source it.
 
@@ -126,5 +122,3 @@ Contact / Credits
 - Built as an example project using the OMDB API.
 
 ---
-
-
