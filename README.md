@@ -27,12 +27,29 @@ OMDB Movie Explorer is a small example web application that lets users search fo
 
 **Features**
 - Search movies via OMDB (server-side API key)
-- Movie detail view with recorded view metrics
-- Favorites: add/remove favorites; favorites persisted in `localStorage`
+- Voice search: Search movies using your microphone for hands-free interaction
+- Movie detail view: Displays plot, actors, director, and ratings; records view metrics
+- Favorites management: add/remove favorites; favorites persisted in localStorage
+- Sorting options: Sort favorites by year, rating, or alphabetical order
 - Centered alert for add/remove favorite actions
+- Trending movies on main page: Displays top-rated movies dynamically
 - Backend batch endpoint to fetch many movie details in one request (`POST /api/movie/batch`)
 - Trending endpoints aggregated by views and ratings for different time ranges
 - Simple in-memory caching with TTL exposed for debugging
+
+## Screenshots
+
+Home / Search Page  
+![Home](screenshots/mainpage.png)
+
+Movie Details Page 
+![Details](screenshots/movieDetails.png)
+
+Favorites  
+![Favorites](screenshots/favorites.png)
+
+Result Grid  
+![Movie Result Grid](screenshots/movieResult.png)
 
 **Tech stack**
 - Backend: Node.js, Express, axios
