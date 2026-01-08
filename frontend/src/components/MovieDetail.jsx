@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { apiUrl } from '../api';
 
 export default function MovieDetail({ imdbID, onClose }) {
   const [data, setData] = useState(null);
@@ -6,12 +7,12 @@ export default function MovieDetail({ imdbID, onClose }) {
     let canceled = false;
     (async () => {
       try {
-        const res = await fetch(`/api/movie/${imdbID}`);
+        const res = await fetch(apiUrl(`/api/movie/${imdbID}`));
         const d = await res.json();
         if (!canceled) setData(d);
      
         try {
-          fetch('/api/metrics/view', {
+          fetch(apiUrl('/api/metrics/view'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ imdbID })

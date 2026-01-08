@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { apiUrl } from '../api';
+
 
 export default function SearchBar({ onSearch }) {
   const [q, setQ] = useState('');
@@ -22,7 +24,7 @@ export default function SearchBar({ onSearch }) {
 
     setLoading(true);
     try {
-      const res = await fetch(`/api/search?title=${encodeURIComponent(q)}&page=1`);
+      const res = await fetch(apiUrl(`/api/search?title=${encodeURIComponent(q)}&page=1`));
       const data = await res.json();
       onSearch(q, data.Search || []);
     } catch (err) {

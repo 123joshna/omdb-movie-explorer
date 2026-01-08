@@ -69,7 +69,7 @@ export default function Favorites({ onSelect }) {
     if (!ids || ids.length === 0) return;
 
     try {
-      const res = await fetch('/api/movie/batch', {
+      const res = await fetch(apiUrl('/api/movie/batch'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ids })

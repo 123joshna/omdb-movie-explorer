@@ -4,6 +4,7 @@ import ResultsGrid from './components/ResultsGrid';
 const MovieDetail = lazy(() => import('./components/MovieDetail'));
 import Favorites from './components/Favorites';
 import CenteredAlert from './components/CenteredAlert';
+import { apiUrl } from '../api';
 
 export default function App() {
   const [results, setResults] = useState([]);
@@ -15,7 +16,7 @@ export default function App() {
    
     (async () => {
       try {
-        const res = await fetch('/api/search/trending');
+        const res = await fetch(apiUrl('/api/search/trending'));
         if (!res.ok) return;
         const data = await res.json();
         const list = data.Search || [];
