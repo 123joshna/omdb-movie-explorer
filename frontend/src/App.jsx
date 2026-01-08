@@ -4,7 +4,7 @@ import ResultsGrid from './components/ResultsGrid';
 const MovieDetail = lazy(() => import('./components/MovieDetail'));
 import Favorites from './components/Favorites';
 import CenteredAlert from './components/CenteredAlert';
-import { apiUrl } from '../api';
+import { apiUrl } from './api';
 
 export default function App() {
   const [results, setResults] = useState([]);
